@@ -1,0 +1,25 @@
+{
+  "name": "node_iot",
+  "version": "1.0.0",
+  "description": "Test de conexion",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Feramdark/IoT_escalable.git"
+  },
+  "keywords": [
+    "feramdark"
+  ],
+  "author": "Luis Fernando Vazquez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Feramdark/IoT_escalable/issues"
+  },
+  "homepage": "https://github.com/Feramdark/IoT_escalable#readme",
+  "dependencies": {
+    "mongoose": "^5.12.9"
+  }
+}
