@@ -1,4 +1,6 @@
 const mongo = require("mongoose");
+const pacientSchema = require("./models/model");
+
 const usser = "ferami_PC";
 const password = "ferami0898";
 const dbName = "iot_fer";
@@ -9,18 +11,7 @@ mongo
   .then(() => console.log("Conectado")) /*mensajes de confirmacion */
   .catch((e) => console.log("Error de conexion", e));
 
-const db = mongo.connection;
-
-db.on("error", console.error.bind(console, "connection error"));
-db.once("open", () => {
-  console.log("Base de datos conectada");
+pacientSchema.find({ nombre: "Aminadad" }, (error, data) => {
+  console.log("Valor devuelto: ", data);
+  mongo.disconnect();
 });
-
-/*const person = mongo.model("heart_values", {
-  nombre: String,
-  edad: Number,
-  valores: Number,
-});
-
-const p1 = new person({name:'Fernando'});
-p1.save().then(()=> console.log("Save Data"));*/

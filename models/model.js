@@ -8,7 +8,7 @@ const pacientSchema = new mongo.Schema(
     edad: Number,
     valores: Number,
   },
-  { versionKey: false }
+  { versionKey: false } //se agrega para que mongodb no inserte una clave por defecto
 );
 
 const pacient = mongo.model('pacientes',pacientSchema);
